@@ -10,6 +10,7 @@
 namespace Marvel;
 
 use DateTime;
+use InvalidArgumentException;
 
 class Utils
 {
