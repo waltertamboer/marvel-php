@@ -42,6 +42,22 @@ abstract class AbstractQuery implements QueryInterface
     }
 
     /**
+     * Gets the parameter with the given name.
+     *
+     * @param string $name The name of the parameter to get.
+     * @param mixed $defaultValue The default value to return.
+     * @return mixed
+     */
+    public function getParam($name, $defaultValue = null)
+    {
+        if (array_key_exists($name, $this->params)) {
+            return $this->params[$name];
+        }
+
+        return $defaultValue;
+    }
+
+    /**
      * Gets all the parameters of this query.
      *
      * @return array

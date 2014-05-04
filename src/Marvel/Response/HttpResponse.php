@@ -9,6 +9,8 @@
 
 namespace Marvel\Response;
 
+use Marvel\Exception\InvalidResponseException;
+
 class HttpResponse
 {
     private $url;
@@ -42,6 +44,9 @@ class HttpResponse
     {
         if ($this->jsonObject === null) {
             $this->jsonObject = json_decode($this->getContent());
+            if (!$this->jsonObject) {
+                throw new InvalidResponseException();
+            }
         }
         return $this->jsonObject;
     }

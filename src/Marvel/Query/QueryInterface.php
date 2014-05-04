@@ -12,6 +12,15 @@ namespace Marvel\Query;
 interface QueryInterface
 {
     /**
+     * Gets the parameter with the given name.
+     *
+     * @param string $name The name of the parameter to get.
+     * @param mixed $defaultValue The default value to return.
+     * @return mixed
+     */
+    public function getParam($name, $defaultValue = null);
+    
+    /**
      * Gets all the parameters of this query.
      *
      * @return array
