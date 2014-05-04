@@ -1,0 +1,5 @@
+composer.phar
+nbproject
+tests
+phpunit.xml.dist
+vendor

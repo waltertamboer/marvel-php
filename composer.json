@@ -1,0 +1,17 @@
+{
+    "name": "waltertamboer/marvel-php",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "*",
+        "phpdocumentor/phpdocumentor": "*",
+        "fabpot/php-cs-fixer": "*@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "Marvel": "src/"
+        }
+    }
+}
